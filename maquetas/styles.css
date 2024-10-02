@@ -1,0 +1,726 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+/* estilo del header  */
+header {
+    display:flex;
+    align-items: center;
+    background-color: #2F4F4F;
+    justify-content: center;
+    padding:20px;
+}
+
+header .title a {
+    color:white;
+    text-decoration: none;
+}
+
+/* estilo del nav  */
+nav {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEB887;
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+nav ul li {
+    display:inline;
+    margin: 0 20px 0 20px;
+    transition: 0.5s;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.item:hover {
+    padding:5px 15px 5px 15px;
+    background-color: darkslategrey;
+    border-radius:30px;
+    border: 4px solid white;
+}
+
+.item:hover a {
+    color:white;
+}
+
+nav.fixed {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index:1500;
+    background-color:lightslategrey;
+    /* padding: 10px; */
+}
+
+/* nav .logo {
+    /* float:right;
+    margin-left:1000px; */
+
+nav .logo {
+    transition:0.5s;
+}
+
+nav .logo img {
+    width:40px;
+    height:40px;
+}
+
+nav .logo:hover {
+    transform:scale(1.2);
+}
+
+/* seccion inicio */
+.bienbenida {
+    width:100%;
+    height:100vh;
+    background-image: url('crucero\ fondo.jpg');
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-welcome {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:20px;
+    /* border:2px solid black; */
+    border-radius:30px;
+    opacity:70% 
+}
+
+.welcome {
+    background-color: aliceblue;
+    margin: 0 10px 0 10px;
+    width:150px;
+    height:150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:100%;
+    font-size: 30px;
+    border: 2px solid black;
+    animation:4s rotacion infinite;
+}
+
+@keyframes rotacion {
+    0% {
+       transform:rotate(0deg)
+    }
+
+    50% {
+        transform:rotate(360deg)
+     }
+
+     100% {
+        transform:rotate(-360deg)
+     }
+}
+
+/* seccion inicio */
+.inicio {
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornsilk;
+}
+
+.recomend {
+    width:300px;
+    height:300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border-radius:30px;
+    margin: 40px;
+    transition:0.5s;
+}
+
+.recomend #crucero {
+    width:150px;
+    height:150px;
+    transition:0.5s;
+}
+
+.recomend button{
+    display:none;
+    transition:0.5s;
+}
+
+
+.container-recomend {
+    display:grid;
+    justify-content: center ;
+    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.recomend:hover #crucero {
+    display:none;
+}
+
+.recomend:hover button {
+    display:flex; 
+    justify-content:center ;
+    align-items: center;
+    width:300px;
+    height:300px;
+    border-radius:30px;
+    background-color:transparent;
+    font-size: 20px;
+    cursor:pointer;
+    border: 4px solid black;
+}
+
+.recomend #documentos {
+    width:150px;
+    height:130px;
+    transition:0.5s;
+}
+
+.recomend:hover #documentos {
+    display:none;
+}
+
+.recomend:hover {
+    transform:scale(1.2)
+}
+
+.recomend #vuelos {
+    width:150px;
+    height:150px;
+}
+
+.recomend:hover #vuelos {
+    display:none;
+}
+
+.recomend #planeacion {
+    width:150px;
+    height:150px;
+}
+
+.recomend:hover #planeacion {
+    display:none;
+}
+
+.recomend #servicio {
+    width:150px;
+    height:150px;
+}
+
+.recomend:hover #servicio {
+   display:none;
+}
+
+.recomend #paises {
+    width:150px;
+    height:150px;
+}
+
+.recomend:hover #paises {
+    display:none;
+}
+
+/* estilo de recursos */
+.recursos {
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: linen;
+}
+
+.recursos .card-recursos{
+    width:1100px;
+    height:700px;
+    background-color: grey;
+    border-radius:30px;
+    border: 4px solid black;
+}
+
+.recursos .card-recursos .title{
+    width:1100px;
+    height:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:30px;
+}
+
+.recursos .card-recursos .recursos-info {
+    width:1100px;
+    height:600px;
+    display:flex;
+    justify-content: center;
+    border-radius:30px;
+    text-align: center;
+}
+
+.recursos .card-recursos .recursos-info p {
+    padding: 20px 70px 0 70px;
+}
+/* estilo de informacion */
+.informacion {
+    width:100%;
+    height:100vh;
+}
+
+/* estilo de tipos de crucero */
+.elecciones-crucero {
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-card-crucero {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.card-crucero {
+    width:400px;
+    height:300px;
+    background-color:black;
+    margin:0 20px 40px 20px;
+    border-radius:30px;
+}
+
+.card-crucero {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crucero-title {
+    color:white;
+    font-size: 30px;
+    border:2px solid white;
+    padding:5px;
+}
+
+.crucero-info {
+    display:none;
+}
+
+.card-crucero:hover .crucero-title {
+    display:none;
+}
+
+.card-crucero:hover .crucero-info  {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:400px;
+    height:300px;
+    padding:20px;
+    color:white;
+    text-align: center;
+}
+
+/* estilo de pagina de docuementos */
+.section-documentos {
+    width:100%;
+    height:100vh;
+}
+
+.section-documentos .title-documentos {
+    height:50px;
+    padding:30px;
+}
+
+.section-documentos .title-documentos h1 {
+    text-align:center;
+}
+
+.informacion-img-documentos{
+    width:100%;
+    height:600px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacion-img-documentos .info-documentos {
+    width:50%;
+    padding:0 50px 0 50px;
+    text-align: center;
+}
+
+.informacion-img-documentos .img-documentos {
+    float:right;
+    width:50%;
+    display:flex;
+    justify-content: center;
+    align-items:center
+}
+
+.informacion-img-documentos .img-documentos img{
+   width:400px;
+}
+
+/* estilo del footer de todas las paginas */
+footer {
+    background-color: darkslategrey;
+    color:white;
+    display:flex;
+    align-items:center;
+    padding: 0 50px 0 50px;
+}
+
+.container-redes {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.container-redes {
+    margin-left:970px;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #fff;
+    z-index: 0;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    z-index: -1;
+    border-radius: 50%;
+    top: 100%;
+  }
+  .wrapper .icon:hover:after {
+    animation: bg-pos 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1 both;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .wrapper .icon:hover {
+    color: #fff;
+    overflow: unset;
+    transition: color 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation: overflow-toggle 0.7s;
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  .wrapper .facebook::after {
+    background-color: #1877f2;
+  }
+  .wrapper .twitter::after {
+    background-color: #1da1f2;
+  }
+  .wrapper .instagram::after {
+    background-color: #e4405f;
+  }
+  
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+  
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+  }
+  
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+  }
+  
+  @keyframes bg-pos {
+    0% {
+      top: 100%;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  
+  @keyframes overflow-toggle {
+    0% {
+      overflow: hidden;
+    }
+    100% {
+      overflow: visible;
+    }
+  }
+
+.text-footer img {
+    width:120px;
+    height:120px;
+    transition:0.5s;
+}
+
+.text-footer:hover img {
+    transform:scale(1.2)
+}
+
+/* estilo de voletos de avion */
+.voletos-avion {
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-avion {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0 20px 0 ;
+}
+
+.title-avion h1{
+   font-size: 30px;
+}
+
+
+.container-avion-voletos {
+    display:grid;
+    grid-template-columns:repeat(3,1fr)
+}
+
+/* estilo de crucero */
+.voletos-crucero {
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-crucero {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0 20px 0 ;
+}
+
+.title-crucero h1{
+   font-size: 30px;
+}
+
+
+.container-crucero-voletos {
+    display:grid;
+    grid-template-columns:repeat(3,1fr)
+}
+
+.container-voletos-crucero {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* estilo de atencion al cliente */
+.servicio-cliente {
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-card-servicio {
+    width:1000px;
+    height: 800px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-servicio {
+    width:700px;
+    height:600px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #808080;
+    border-radius:40px;
+    transition: 0.5s;
+}
+
+.title-servicio {
+    transition:0.5ss;
+}
+
+.informacion-servicio {
+    display: none;
+    transition: 0.5s;
+}
+
+.container-card-servicio:hover .title-servicio {
+    display:none;
+}
+
+.container-card-servicio:hover:hover .informacion-servicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+}
+
+.container-card-servicio:hover .card-servicio {
+    background-color: #2F4F4F;
+    transform: scale(1.2);
+}
+
+.informacion-servicio ul {
+    list-style: none;
+}
+
+.informacion-servicio li {
+  margin: 10px ;
+}
+
+/* estilo de pagina de paises por visitar */
+.section-visita {
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-visita {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0 ;
+}
+
+.container-card-visita {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.container-card-visita .card-visita {
+    width: 400px;
+    height:300px;
+    border-radius:30px;
+    margin:20px 30px 20px 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transition:0.5s;
+}
+
+.card-visita img{
+    display:none;
+    transition:0.5s;
+}
+
+.card-visita p {
+    display:flex;
+    color:white;
+    font-size: 30px;;
+}
+
+.card-visita:hover p {
+   display:none;
+}
+
+.card-visita:hover img{
+    display:flex;
+    width:400px;
+    height:300px;
+    border-radius:30px;
+}
+
+.card-visita:hover {
+    transform:scale(1.2)
+}
